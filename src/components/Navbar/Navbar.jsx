@@ -13,7 +13,8 @@ const Navbar = () => {
     
 
     return (
-        <div className="navbar bg-base-100">
+       <div className="max-w-[1200px] mx-auto">
+         <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -36,6 +37,7 @@ const Navbar = () => {
           <button className="btn">Login</button>
         </div>
       </div>
+       </div>
     );
 };
 

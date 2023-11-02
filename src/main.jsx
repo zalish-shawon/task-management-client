@@ -9,6 +9,8 @@ import {
 import Home from './components/Home/Home.jsx';
 import MainLayout from './components/MainLayout/MainLayout.jsx';
 import UsersTasks from './components/UsersTasks/UsersTasks.jsx';
+import AddTasks from './components/AddTask/AddTasks.jsx';
+import UpdateTasks from './components/UpdateTasks/UpdateTasks.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +23,17 @@ const router = createBrowserRouter([
       element:<Home></Home>,
     },
     {
+      path: "/addTask",
+      element: <AddTasks></AddTasks>
+    },
+    {
       path: "/usersTasks",
-      element: <UsersTasks></UsersTasks>
+      element: <UsersTasks></UsersTasks>,
+      loader: () => fetch('http://localhost:5000/usersTasks')
+    },
+    {
+      path: "/updateTask/:id",
+      element: <UpdateTasks></UpdateTasks>
     }
   ]
   },
