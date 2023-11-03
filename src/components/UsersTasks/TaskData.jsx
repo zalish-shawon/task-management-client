@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const TaskData = ({ task }) => {

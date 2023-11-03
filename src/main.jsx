@@ -33,7 +33,8 @@ const router = createBrowserRouter([
     },
     {
       path: "/updateTask/:id",
-      element: <UpdateTasks></UpdateTasks>
+      element: <UpdateTasks></UpdateTasks>,
+      loader: ({params}) => fetch(`http://localhost:5000/usersTasks/${params.id}`)
     }
   ]
   },
